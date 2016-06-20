@@ -1,0 +1,15 @@
+server {
+  listen 80;  
+  listen 443 ssl;
+
+  ssl_certificate     /etc/letsencrypt/live/SKELETON/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/SKELETON/privkey.pem;
+
+  server_name  SKELETON;
+  root       /srv/www/SKELETON/public_html;
+  error_log  /srv/www/SKELETON/logs/error.log;
+  access_log /srv/www/SKELETON/logs/access.log;
+
+  include /etc/nginx/snippets/site-default.conf; 
+  include /etc/nginx/snippets/site-secure.conf;
+}
