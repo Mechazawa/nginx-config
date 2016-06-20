@@ -10,8 +10,8 @@ server {
   error_log  /srv/www/shodan.me/logs/error.log;
   access_log /srv/www/shodan.me/logs/access.log;
 
-  include /etc/nginx/site-default.conf; 
-  include /etc/nginx/site-secure.conf;
+  include /etc/nginx/snippets/site-default.conf; 
+  include /etc/nginx/snippets/site-secure.conf;
 
   location /downloads {
     autoindex on;
